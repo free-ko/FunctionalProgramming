@@ -117,7 +117,9 @@ const _groupBy = (items, callback) => {
   );
 };
 
-_groupBy({ a: 6.1, b: 4.2, c: 6.3 }, Math.floor);
+const _unique = (array, callback, isSorted) => {
+  return [...new Set(array)];
+};
 
 const _pipe =
   (...fns) =>
@@ -131,5 +133,6 @@ module.exports = {
   _reduce,
   _take,
   _groupBy,
+  _unique,
   _pipe,
 };
